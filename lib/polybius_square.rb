@@ -32,4 +32,20 @@ class PolybiusSquare
     end
     aux
   end
+
+  def self.decrypt(number, encrypt)
+    poly = PolybiusSquare.new(number)
+    encrypt = encrypt.scan(/../)
+    aux = ''
+    encrypt.each do |nn|
+      for i in 1..number do
+        for j in 1..number do
+          if nn == i.to_s + j.to_s
+            aux << poly.polybius[i][j]
+          end
+        end
+      end
+    end
+    aux
+  end
 end

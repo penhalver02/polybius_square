@@ -13,7 +13,10 @@ describe PolybiusSquare do
     expect(poly).to include('34332623122333')
   end
 
-  xit 'decrypt 34332623122333' do
+  it 'decrypt 34332623122333' do
+    poly = PolybiusSquare.decrypt(6, '34332623122333')
+
+    expect(poly).to include('polibio')
   end
 
   xit 'encrypt 1 anel para todos governar' do
