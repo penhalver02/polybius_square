@@ -2,6 +2,9 @@ require 'spec_helper'
 
 describe PolybiusSquare do
   it 'initialize matrix' do
+    polybius = PolybiusSquare.new(5)
+
+    expect(polybius.polybius[1][1]).to include('a') 
   end
 
   it 'encrypt polibio' do
