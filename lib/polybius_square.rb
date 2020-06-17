@@ -19,7 +19,9 @@ class PolybiusSquare
 
   def self.encrypt(number, word)
     polybius = PolybiusSquare.new(number)
+    word = word.gsub(' ','')
     word = word.split('')
+    
     aux = ''
     word.each do |letter|
       for i in 1..number do
