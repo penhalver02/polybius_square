@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'active_support/all'
+require 'pry'
 PROJECT_ROOT = File.expand_path('..', __dir__)
 
 Dir.glob(File.join(PROJECT_ROOT, 'lib', '*.rb')).each do |file|
