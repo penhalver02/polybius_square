@@ -25,13 +25,24 @@ describe PolybiusSquare do
     expect(poly).to include('5411321526341136111142331433412133441536321136')
   end
 
-  xit 'decrypt 5411321526341136111142331433412133441536321136' do
+  it 'decrypt 5411321526341136111142331433412133441536321136' do
+    poly = PolybiusSquare.decrypt(6, '5411321526341136111142331433412133441536321136')
+
+    expect(poly).to include('1anelparaatodosgovernar')
   end
 
-  xit 'encrypt Ada Lovelance foi a primeira programadora em 1842' do
+  it 'encrypt Ada Lovelace foi a primeira programadora em 1842' do
+    poly = PolybiusSquare.encrypt(6, 'Ada Lovelace foi a primeira programadora em 1842')
+    
+    expect(poly).to include('11141126334415261113151633231134362331152336113436332136113'\
+                            '11114333611153154656155')
   end
 
-  xit 'decrypt 11141126334415261113151633231134362331152336113436332136113'\
+  it 'decrypt 11141126334415261113151633231134362331152336113436332136113'\
      '11114333611153154656155' do
+    poly = PolybiusSquare.decrypt(6, '11141126334415261113151633231134362331152336113436332136113'\
+                                     '11114333611153154656155')
+
+    expect(poly).to include('adalovelacefoiaprimeiraprogramadoraem1842')
   end
 end
